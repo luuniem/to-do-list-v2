@@ -1,13 +1,10 @@
 import React from "react";
 import "../node_modules/materialize-css/dist/css/materialize.min.css";
 import "../node_modules/materialize-css/dist/js/materialize.min.js";
+import Tasks from "./components/Tasks";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>To Do List</h1>
-    </div>
-  );
-}
+const App = props => {
+  return <Tasks />;
+};
 
 export default App;
