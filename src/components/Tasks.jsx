@@ -10,12 +10,15 @@ const Tasks = () => {
       { id: Math.random().toString(), ...task }
     ]);
   };
+  const removeTaskHandler = taskId => {
+    setAddedTasks(prevTasks => prevTasks.filter(task => task.id !== taskId));
+  };
 
   return (
     <div className="App">
       <TaskForm onAddTask={addTaskHandler} />
       <section>
-        <TaskList tasks={addedTasks} />
+        <TaskList tasks={addedTasks} removeTask={removeTaskHandler} />
       </section>
     </div>
   );
